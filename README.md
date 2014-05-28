@@ -1,7 +1,15 @@
-Gulp + Assemble + etc
+Gulp + Assemble + BrowserSync + etc
 ============
 
-Example Gulp project
+### Gulp project
+* assemble
+* browserSync
+* coffescript
+* livereload
+* sass
+* minify
+* autoprefixer
+* notify
 
 ## Install
 npm install
