@@ -2,6 +2,7 @@ Gulp + Assemble + BrowserSync + etc
 ============
 
 ### Gulp project
+* bower
 * assemble
 * browserSync
 * coffescript
