@@ -19,5 +19,6 @@ Icon
 .Spotlight-V100
 .Trashes
 
+bower_components
 node_modules
 dist

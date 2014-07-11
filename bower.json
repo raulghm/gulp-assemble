@@ -1,0 +1,25 @@
+{
+  "name": "bower",
+  "version": "0.0.0",
+  "homepage": "https://github.com/raulghm/gulp-assemble",
+  "authors": [
+    "raulghm <raulghm@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "*",
+    "modernizr": "*",
+    "jeet.gs": "*",
+    "bourbon": "3.2.*",
+    "fontawesome": "*",
+    "bootstrap-sass-official": "*",
+    "pesticide": "git://github.com/mrmrs/pesticide"
+  }
+}

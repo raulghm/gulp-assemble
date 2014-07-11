@@ -42,8 +42,8 @@ gulp.task "clean", ->
 # copy vendor scripts
 gulp.task "copy", ->
 	gulp.src [
-		src + "/vendor/scripts/jquery.js"
-		src + "/vendor/scripts/modernizr.js"
+		"bower_components/jquery/dist/jquery.js"
+		"bower_components/modernizr/modernizr.js"
 	]
 	.pipe uglify()
 	.pipe gulp.dest dest + "/scripts"
