@@ -89,7 +89,7 @@ gulp.task "styles", ->
 		onError: (err) -> notify().write(err)
 	.pipe autoprefixer("last 15 version")
 	.pipe gulp.dest dest + "/styles"
-	.pipe livereload(server)
+	.pipe browserSync.reload({stream:true})
 
 # styles-dist
 gulp.task "styles-dist",  ->
@@ -117,18 +117,15 @@ gulp.task "browser-sync", ->
 	browserSync.init null,
 		server:
 			baseDir: dest
-			proxy: "192.168.0.100:3002"
+			proxy: "192.168.1.159:3002"
 
 gulp.task 'watch', ->
-	server.listen 35729, (err) ->
-		return console.error(err)  if err
-
-		gulp.watch [src + '/scripts/**/*.coffee'], ['scripts']
-		gulp.watch [src + '/styles/**/*.scss'], ['styles']
-		gulp.watch [src + '/templates/**/*.hbs'], ['assemble']
-		gulp.watch [src + "/vendor/scripts/plugins/*.js"], ['scripts']
-		gulp.watch( src + '/templates/**/*.hbs' ).on "change", (file) ->
-			livereload(server).changed file.path
+	gulp.watch [src + '/scripts/**/*.coffee'], ['scripts']
+	gulp.watch [src + '/styles/**/*.scss'], ['styles']
+	gulp.watch [src + '/templates/**/*.hbs'], ['assemble']
+	gulp.watch [src + "/vendor/scripts/plugins/*.js"], ['scripts']
+	gulp.watch( src + '/templates/**/*.hbs' ).on "change", (file) ->
+		livereload(server).changed file.path
 
 #
 #  main tasks
