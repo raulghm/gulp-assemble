@@ -20,6 +20,8 @@
     "bourbon": "3.2.*",
     "fontawesome": "*",
     "bootstrap-sass-official": "*",
-    "pesticide": "git://github.com/mrmrs/pesticide"
+    "pesticide": "git://github.com/mrmrs/pesticide",
+    "raulghm-sass-utils": "*",
+    "social-media-colors": "*"
   }
 }

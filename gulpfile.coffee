@@ -89,7 +89,7 @@ gulp.task "styles", ->
 		onError: (err) -> notify().write(err)
 	.pipe autoprefixer("last 15 version")
 	.pipe gulp.dest dest + "/styles"
-	.pipe browserSync.reload({stream:true})
+	.pipe browserSync.reload stream:true
 
 # styles-dist
 gulp.task "styles-dist",  ->
@@ -111,6 +111,7 @@ gulp.task "assemble", ->
 		partials: src + "/templates/partials/*.hbs"
 		layoutdir: src + "/templates/layouts/"
 	.pipe gulp.dest dest
+	.pipe browserSync.reload stream:true
 
 # Proxy to existing vhost (version 0.7.0 & greater)
 gulp.task "browser-sync", ->
@@ -124,8 +125,6 @@ gulp.task 'watch', ->
 	gulp.watch [src + '/styles/**/*.scss'], ['styles']
 	gulp.watch [src + '/templates/**/*.hbs'], ['assemble']
 	gulp.watch [src + "/vendor/scripts/plugins/*.js"], ['scripts']
-	gulp.watch( src + '/templates/**/*.hbs' ).on "change", (file) ->
-		livereload(server).changed file.path
 
 #
 #  main tasks

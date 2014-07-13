@@ -4,6 +4,8 @@
 @import "../../bower_components/fontawesome/scss/font-awesome";
 @import "../../bower_components/jeet.gs/scss/jeet/index";
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../../bower_components/social-media-colors/sass/social_media_colors";
+@import "../../bower_components/raulghm-sass-utils/dist/index";
 
 // components
 
@@ -12,6 +14,7 @@
 // plugins
 
 // layout
+@import "layout/scaffolding";
 
 // partials
 

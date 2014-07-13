@@ -1,6 +1,9 @@
-// $pesticide-debug: false;
-
 body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
+}
+
+section {
+	max-width: 980px;
+	margin: 0 auto;
 }
