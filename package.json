@@ -5,6 +5,9 @@
   "author": "gulper",
   "devDependencies": {
     "coffee-script": "*",
+    "grunt": "*",
+    "grunt-webfont": "*",
+    "grunt-favicons": "*",
     "gulp": "*",
     "gulp-util": "*",
     "gulp-concat": "*",
